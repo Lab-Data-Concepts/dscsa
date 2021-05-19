@@ -16,6 +16,11 @@ includes the name of the product, its strength and dosage form, its National Dru
 
 Manufacturers and re-packagers can only sell to authorized trading partners, and the law establishes national license standards for wholesalers and third-party logistics providers. Trading partners must also verify returns before redistribution, and the law added requirements to provide for full tracing of products at the package level.
 
+Estimated #s:
+    - Manufacturers = 1,400
+    - Distributors  = 70
+    - Dispensers    = 166,000
+
 ## Simple version 1 [Requirements](https://pmg-production.s3.amazonaws.com/2020/HCP/Files/HCP2018_Serialization_NODATE.pdf)
 
 Show traceability
