@@ -12,9 +12,9 @@ An alternative design by [Middle East Medicine](https://www.middleeastmedicalpor
 
 ## Installation
 
-Reference [OpenZeppelin](https://docs.openzeppelin.com/learn/) for details in setting up your environment. This repository was built on Windows and Visual Code.  A brief summary is provided in the [installation.md](https://github.com/Sun2Money/DSCSA/blob/main/installation.md).
+Reference [OpenZeppelin](https://docs.openzeppelin.com/learn/) for details in setting up your environment. This repository was built on Windows and Visual Code.  A brief summary is provided in the [10_Installation.md](10_Installation.md).
 
-## Development
+## Common Development Commands
 
 1. Launch Ganache to initialize local blockchain
 2. npx truffle init
