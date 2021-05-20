@@ -23,6 +23,7 @@ contract DSCSAOwner is DSCSAOwner {
     string  internal  lot;
     uint    internal  serialNumber;
 '''
+
 ### Test Contract: npx truffle test ./test/DSCSAOwner.test.js
 
 ![Testing Output](doc/99_images/README/Testing_Output.png)
