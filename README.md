@@ -12,6 +12,17 @@ Reference [OpenZeppelin](https://docs.openzeppelin.com/learn/) for details in se
 
 ## Usage
 
-### Test Contract with npx truffle test ./test/DSCSAOwner.test.js
+### Build Contract
 
-![LDC Logo](doc/99_images/README/Testing_Output.png)
+Create Solidity code to inherit from DSCSAOwner:
+'''
+contract DSCSAOwner is DSCSAOwner {
+    address internal  holderAddress;
+    uint    internal  globalTradeItemNumber;
+    uint    internal  expirationDate;
+    string  internal  lot;
+    uint    internal  serialNumber;
+'''
+### Test Contract: npx truffle test ./test/DSCSAOwner.test.js
+
+![Testing Output](doc/99_images/README/Testing_Output.png)

@@ -1,6 +1,8 @@
 // migrations/2_deploy.js
-const DSCSA = artifacts.require("DSCSAOwner");
+const DSCSAOwner     = artifacts.require("DSCSAOwner");
+const DSCSAOwnerMock = artifacts.require("DSCSAOwnerMock");
 
 module.exports = async function (deployer) {
-  await deployer.deploy(DSCSA);
+  await deployer.deploy(DSCSAOwner);
+  await deployer.deploy(DSCSAOwnerMock);
 };
