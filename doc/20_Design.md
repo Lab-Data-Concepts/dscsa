@@ -16,7 +16,7 @@ An alternative design by [Middle East Medicine](https://www.middleeastmedicalpor
 2. npx truffle init
 3. npx truffle compile ./contracts/DSCSAOwnerMock.sol
 4. npx truffle migrate --network development
-5. npx truffle test ./test/DSCSAOwner.test.js > test.log
+5. npx truffle test ./test/DSCSAOwnerMock.test.js
 
 ### Example Code
 
