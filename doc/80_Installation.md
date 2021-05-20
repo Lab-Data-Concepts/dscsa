@@ -1,8 +1,10 @@
-# Installation instructions
+# ![LDC Logo](99_images/LDC_32_32.ico) Installation Instructions
 
-These [instructions](https://docs.openzeppelin.com/learn/) were a great help in getting started:
+These OpenZeppelin [instructions](https://docs.openzeppelin.com/learn/) were a great help in getting started.
 
-1. Install Node.js if needed
+A brief overview of the install process that was used in building this repository:
+
+1. Install [Node.js](https://nodejs.org/en/download/) if needed
     - node --version
 2. Create a project and package (package.json) and initialize
     - npm init -y

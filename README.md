@@ -6,7 +6,12 @@ Implementation of the FDA DSCSA supply chain regulation in a Consortium Blockcha
 
 The DSCSA is a [FDA regulation](https://www.fda.gov/drugs/drug-supply-chain-security-act-dscsa/drug-supply-chain-security-act-law-and-policies) to track drug packages through the supply chain.  The FDA completed a DSCSA blockchain pilot in 2020: [FDA Blockchain Pilot Report](https://www.ibm.com/downloads/cas/9V2LRYG5).
 
-The pharmaceutical supply chain of Trading Partners:
-    Supplier->Manufacturer->Re-packagers->Distributor->Wholesaler->Dispensers
+## Installation
 
-The DSCSA currently has an implementation due date of November 27, 2023.  That date might change due to COVID-19 impacts.
+Reference [OpenZeppelin](https://docs.openzeppelin.com/learn/) for details in setting up the development environment. A summary is provided in the [80_Installation.md](doc/80_Installation.md).
+
+## Usage
+
+### Test Contract with npx truffle test ./test/DSCSAOwner.test.js
+
+![LDC Logo](doc/99_images/README/Testing_Output.png)

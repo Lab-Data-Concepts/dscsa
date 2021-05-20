@@ -1,4 +1,4 @@
-# High level design
+# ![LDC Logo](99_images/LDC_32_32.ico) High level design
 
 - Track the smallest sealable unit (package) identified by the Serial Number (S/N)
 - Include composite key information (GTIN+LOT)
@@ -9,10 +9,6 @@
 Approach is based on grouping the smallest packages into groups instead of removing packages from groups(e.g. lots)
 
 An alternative design by [Middle East Medicine](https://www.middleeastmedicalportal.com/a-blockchain-based-approach-for-drug-traceability-in-healthcare-supply-chain/) is to bundle packages by lot number and handle distribution of the packets on an existing blockchain like Ethereum.
-
-## Installation
-
-Reference [OpenZeppelin](https://docs.openzeppelin.com/learn/) for details in setting up your environment. This repository was built on Windows and Visual Code.  A brief summary is provided in the [10_Installation.md](10_Installation.md).
 
 ## Common Development Commands
 
