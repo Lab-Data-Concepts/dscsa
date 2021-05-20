@@ -1,4 +1,4 @@
-# ![LDC Logo](doc/99_images/LDC_32_32.ico) FDA Drug Supply Chain Security Act (DSCSA) Blockchain Overview
+# ![LDC Logo](doc/99_images/LDC_32_32.ico) Drug Supply Chain Security Act (DSCSA) Blockchain
 
 Implementation of the FDA DSCSA supply chain regulation in a Consortium Blockchain implemented on Ethereum.
 
