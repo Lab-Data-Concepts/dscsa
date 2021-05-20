@@ -6,7 +6,7 @@ const { ZERO_ADDRESS } = constants;
 const { expect, assert } = require('chai');
 
 // Load compiled artifacts
-const DSCSA = artifacts.require('DSCSA');
+const DSCSA = artifacts.require('DSCSAOwner');
 
 // Define Global Test Variables
 var testHolderAddress; 

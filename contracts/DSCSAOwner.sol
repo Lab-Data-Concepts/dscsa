@@ -1,4 +1,4 @@
-// contracts/DSCSA.sol
+// contracts/DSCSAOwner.sol
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.4;
 
@@ -10,7 +10,7 @@ import "node_modules/@openzeppelin/contracts/access/Ownable.sol";
 /// @author Tracy Sanders
 /// @notice You can use this contract for only the most basic simulation
 /// @dev    A simple example of a Blockchain inheriting Ownable, MAH in this problem domin
-contract DSCSA is Ownable {
+contract DSCSAOwner is Ownable {
     address internal  holderAddress; 
     uint    internal  globalTradeItemNumber;
     uint    internal  expirationDate;
