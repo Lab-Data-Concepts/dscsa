@@ -54,4 +54,7 @@ The Ganache blockchain explorer shows a contract being created and the holder be
 
 Visit [OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/) for additional information.
 
-The next steps for this repository is to implement the DSCSA via the [ERC1155 Multi Token Standard](https://docs.openzeppelin.com/contracts/4.x/erc1155) and add [AccessControl](https://docs.openzeppelin.com/contracts/4.x/api/access#AccessControl).
+Next steps for this repository:
+
+- Implement the DSCSA via the [ERC1155 Multi Token Standard](https://docs.openzeppelin.com/contracts/4.x/erc1155)
+- Add [AccessControl](https://docs.openzeppelin.com/contracts/4.x/api/access#AccessControl)
