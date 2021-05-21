@@ -123,6 +123,16 @@ The blockchain will include keys to get additional metadata from other systems (
 | `HL7`         | [Health Level 7](https://www.hl7.org/implement/standards/)                                               |
 | `NCI-GDC`     | [Clinical Data Standardization](https://gdc.cancer.gov/about-data/gdc-data-processing/clinical-data-standardization) |
 
+## Use Cases
+
+| Use Case          | Definition                                                                                            |
+| :---              | ---                                                                                                   |
+| `SimpleObserver`  | Only the MAH updates blockchain as events happen in internal systems for external viewers             |
+| `MixedObserver`   | Some authorized trading partners are able to update the blockchain                                    |
+| `Nirvana`         | All trading partners are responsible for updating the blockchain                                      |
+| `MultiChain`      | Product is transferred to a different consortium blockchain / ledger                                  |
+| `ChainChanges`    | Key trading partner, technical, or metadata  changes in the consortium blockchain           |
+
 ## Functional Requirements
 
 1. Show traceability
@@ -136,7 +146,11 @@ The blockchain will include keys to get additional metadata from other systems (
 
 ### Future Functional Requirements
 
-- Return processing
+- Product Return processing
+- Authorized trading partner licensing
+- Product divestitures
+- Removal of quality samples during distribution
+- Reverse distribution
 - Handling partial containers
 - Exceptions:
     1. Overage
