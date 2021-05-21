@@ -2,7 +2,6 @@
 // Used to test DSCSAOwner
 pragma solidity 0.8.4;
 
-// Import Ownable->Context from the OpenZeppelin Contracts library
 import "./DSCSAOwner.sol";
 
 contract DSCSAOwnerMock is DSCSAOwner {

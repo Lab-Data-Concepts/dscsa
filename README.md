@@ -15,15 +15,37 @@ Reference [OpenZeppelin](https://docs.openzeppelin.com/learn/) for details in se
 ### Build Contract
 
 Create Solidity code to inherit from DSCSAOwner:
-'''
-contract DSCSAOwner is DSCSAOwner {
-    address internal  holderAddress;
-    uint    internal  globalTradeItemNumber;
-    uint    internal  expirationDate;
-    string  internal  lot;
-    uint    internal  serialNumber;
-'''
 
-### Test Contract: npx truffle test ./test/DSCSAOwner.test.js
+```javascript
+pragma solidity 0.8.4;
+import "./DSCSAOwner.sol";
 
-![Testing Output](doc/99_images/README/Testing_Output.png)
+contract DSCSAOwnerMock is DSCSAOwner {
+    // Real use case would add custom logic here
+}
+```
+
+### Compile and Deploy
+
+```javascript
+npx truffle compile ./contracts/DSCSAOwnerMock.sol
+npx truffle migrate --network development
+```
+
+### Test Contract
+
+Launch Ganache for Blockchain testing and then run the test:
+
+```javascript
+npx truffle test ./test/DSCSAOwnerMock.test.js
+```
+
+#### Truffle Testing Output
+
+![Truffle Testing Output](doc/99_images/README/1_Testing_Output.png)
+
+#### Ganache Testing Output Labeled
+
+![Ganache Testing Output](doc/99_images/README/2_Testing_Ganache_Output.png)
+
+The Ganache blockchain explorer shows a contract being created and the holder being changed by the MAH.
