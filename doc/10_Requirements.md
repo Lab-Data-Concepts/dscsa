@@ -7,6 +7,16 @@ The pharmaceutical supply chain of Trading Partners:
 
 The DSCSA currently has an implementation due date of November 27, 2023.  That date might change due to COVID-19 impacts.
 
+## Scope of the DSCSA
+
+The DSCSA applies to the to the movement of product in the supply chain apply only to prescription drugs *“…in a finished dosage form for administration to a patient without substantial further manufacturing (such as capsules,
+tablets, and lyophilized products before reconstitution)“*.
+
+### Combination Products
+
+Some devices are classified by the FDA as drug-device or biologic-device Combination Products (CPs). If the FDA has determined that the Primary Mode of Action (PMOA) of your product is as a drug or a biologic, then your
+CP may not be exempt from the DSCSA.
+
 ## Business Scenarios
 
 The following business scenarios indicate a highly flexible solution is needed.
@@ -39,7 +49,7 @@ Companies merge together taking the best parts of each and making a new company 
 
 One company buys another or its products.  Generally, products are added to the buying company's existing infrastructure.  For example, Warner-Lambert was purchased by Pfizer.  Pfizer then sold its consumer health division to J&J's McNeal Consumer Health.
 
-Listerine was first marketed in 1914 by Lambert Pharmacal Company.  If the DSCSA was required then, the detailed DSCSA records would have to be maintained during the merger with Warner-Hudnut, acquisition by Pfizer, and sale to J&J.
+Listerine was first marketed in 1914 by Lambert Pharmacal Company.  If the DSCSA was required then for Listerine, the detailed DSCSA records would have to be maintained during the merger with Warner-Hudnut, acquisition by Pfizer, and sale to J&J.
 
 ### Licensing Partners
 
@@ -87,6 +97,7 @@ The benefits of this approach are:
 - **Tracing** of Transactional Information back to the manufacturer for each saleable unit
 - **Recall** all relevant information about a given pharmaceutical lot
 - **Alert** the network about drugs flagged as under evaluation,under investigation, or recalled status
+- **Metadata** keys for additional details on package
 
 ### Transactional Information and Transactional Statements
 
@@ -99,9 +110,22 @@ Estimated #s:
     - Distributors  = 70
     - Dispensers    = 166,000
 
-## Simple version 1
+### Metadata
 
-Show traceability
+The blockchain will include keys to get additional metadata from other systems (i.e. [IPFS](ipns://ipfs.io/)).  
+
+| Metadata      | Definition                                                                                               |
+| :---          | ---                                                                                                      |
+| `GS1`         | [Supply Chain Standards,](https://www.gs1.org/)                                                          |
+| `OPEN-SCS`    | [The Open Serialization Communication Standard (Open-SCS)](https://www.open-scs.org/)                    |
+| `CDISC`       | [Clinical Trial Standards](https://www.cdisc.org/)                                                       |
+| `E2B AE`      | [ICH E2B](https://ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) |
+| `HL7`         | [Health Level 7](https://www.hl7.org/implement/standards/)                                               |
+| `NCI-GDC`     | [Clinical Data Standardization](https://gdc.cancer.gov/about-data/gdc-data-processing/clinical-data-standardization) |
+
+## Functional Requirements
+
+1. Show traceability
 
 - OwnerAddress (MAH)
 - HolderAddress (Possession of Package)
@@ -109,3 +133,40 @@ Show traceability
 - Expiration Date (EXP)
 - Lot Number (LOT)
 - Serial Number (S/N)
+
+### Future Functional Requirements
+
+- Return processing
+- Handling partial containers
+- Exceptions:
+    1. Overage
+    2. Shortage
+    3. Transaction Serial# Discrepancy
+    4. Transaction Lot# Discrepancy
+    5. Transaction Serial# And Lot# Incorrect
+    6. Product Inference Problem
+    7. Quantity Inference Problem
+    8. Physical Inventory Overage
+    9. Physical Inventory Overage (Concealed Overage)
+    10. Physical Inventory Shortage (Concealed Shortage)
+    11. Transaction Contains Incorrect Customer/Location Information
+    12. Transaction Contains Incorrect Product Information
+    13. Transaction Contains Incorrect Reference# Information
+    14. Transaction (Or EPCIS Ship Event) Not Received By Customer
+    15. Exception 15: Undelivered Shipment
+    16. Lost Shipment
+    17. Received Physical Product From An Unidentified Sender
+    18. Missing
+    19. Could Not Read Transaction Data Due To Security Mismatch
+    20. Transaction Data Not In Correct Format
+    21. Good Product - Damaged Barcode Or RFID
+    22. Damaged Product - Good Barcode Or RFID
+    23. Damaged Product - Damaged Barcode Or RFID
+    24. Damaged Shipment
+    25. No ParentChild Aggregation
+    26. Transaction Data Incomplete
+    27. Transaction Data Has Broken Chain
+    28. Shipped Product To Wrong Customer & Transaction Data To Correct Customer
+    29. Customer Refuses Order
+    30. Unauthorized Return
+    31. Shipment For Wholesaler “Y” Arrives At Wholesaler “X”
