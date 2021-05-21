@@ -49,3 +49,9 @@ npx truffle test ./test/DSCSAOwnerMock.test.js
 ![Ganache Testing Output](doc/99_images/README/2_Testing_Ganache_Output.png)
 
 The Ganache blockchain explorer shows a contract being created and the holder being changed by the MAH.
+
+## Learn More & Next Steps
+
+Visit [OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/) for additional information.
+
+The next steps for this repository is to implement the DSCSA via the [ERC1155 Multi Token Standard](https://docs.openzeppelin.com/contracts/4.x/erc1155) and add [AccessControl](https://docs.openzeppelin.com/contracts/4.x/api/access#AccessControl).
