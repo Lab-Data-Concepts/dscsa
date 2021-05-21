@@ -4,6 +4,7 @@
 | :---      | ---                                                                                       |
 | `ABI`     | Ethereum Contract Application Binary Interface (ABI)                                      |
 | `AI`      | Application identifiers                                                                   |
+| `API`     | Application Program Interface                                                             |
 | `DLT`     | Distributed Ledger Technology                                                             |
 | `MAH`     | Marketing Authorization Holder                                                            |
 | `UUID`    | Universal Unique IDentifier                                                               |

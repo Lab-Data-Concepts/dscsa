@@ -7,9 +7,24 @@ The pharmaceutical supply chain of Trading Partners:
 
 The DSCSA currently has an implementation due date of November 27, 2023.  That date might change due to COVID-19 impacts.
 
-## [Blockchain Overview](https://www.accenture.com/_acnmedia/pdf-71/accenture_blockchain_innovations_life_sciences.pdf)
+## Blockchain Business Case
 
-"Despite the various efforts of full chain of custody systems that exist today, the fragmentation of systems between trading partners opens the risk for fraud. Blockchain technology is an ideal solution, given that no single organization is responsible for provenance. Organizations across the life sciences ecosystem benefit from having authentic product in the supply chain, ensuring brand integrity and improved patient outcomes by delivering authentic product to the patient. Blockchain enables the idea of a “digital passport” for a product, containing all relevant information for each component or ingredient, including instructions and patient adherence information from the packaging."
+An additive consortium blockchain implementation is the solution offered in this repository.  
+
+The benefits of this approach are:
+
+1. Encapsulates the DSCSA implementation with a consortium blockchain
+    - Protects and reduces changes to the existing supply chain infrastructure
+    - Future system infrastructure upgrades can be made without DSCSA constraints
+    - Mergers and acquisitions of additional products can be done directly to the blockchain insulating infrastructure
+2. Provides a common industrial solution for consortium trading partners
+    - Avoids maintaining an API for trading partners
+    - Avoids trading partners from having to implement multiple protocols across manufacturers
+3. Reduces the risk for fraud due to multitude of systems used by trading partners
+4. Creates a "digital twin" or "digital passport" of packages being shipped
+5. Creates a self-service module allowing authorized consortium members to view data as needed
+6. Provides key information that can be used to query additional package details
+7. Eliminates anti-monopoly concerns about requiring smaller companies to comply with mandates from larger companies
 
 ## [High level Requirements](https://www.pharmexec.com/view/what-you-need-know-about-drug-supply-chain-security-act)
 
