@@ -96,7 +96,7 @@ The benefits of this approach are:
 - **Verification** of the Product Identifier, which includes the GTIN/NDC, serial number, lot number, and expiration date
 - **Tracing** of Transactional Information back to the manufacturer for each saleable unit
 - **Recall** all relevant information about a given pharmaceutical lot
-- **Alert** the network about drugs flagged as under evaluation,under investigation, or recalled status
+- **Alert** the network about drugs flagged as under evaluation, under investigation, or recalled status
 - **Metadata** keys for additional details on package
 
 ### Transactional Information and Transactional Statements
