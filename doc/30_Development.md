@@ -1,5 +1,10 @@
 # ![LDC Logo](99_images/LDC_32_32.ico) Development and Coding
 
+## Style Guides
+
+- [Solidity Style Guide](https://docs.soliditylang.org/en/latest/style-guide.html)
+- [JavaScript Standard Style](https://standardjs.com/)
+
 ## Common Development Commands
 
 1. Launch Ganache to initialize local blockchain

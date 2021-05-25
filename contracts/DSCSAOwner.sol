@@ -1,5 +1,4 @@
-// contracts/DSCSAOwnerMock.sol
-// SPDX-License-Identifier: MIT
+// contracts/DSCSAOwnerMock.sol - SPDX-License-Identifier: MIT
 pragma solidity 0.8.4;
 
 // Import Ownable->Context from the OpenZeppelin Contracts library
