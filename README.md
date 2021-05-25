@@ -8,7 +8,7 @@ The DSCSA is a [FDA regulation](https://www.fda.gov/drugs/drug-supply-chain-secu
 
 ## Installation
 
-Reference [OpenZeppelin](https://docs.openzeppelin.com/learn/) for details in setting up the development environment. A summary is provided in the [80_Installation.md](doc/80_Installation.md).
+Reference [OpenZeppelin](https://docs.openzeppelin.com/learn/) for details in setting up the development environment. A summary is provided in the [31_Installation.md](doc/31_Installation.md).
 
 ## Usage
 
