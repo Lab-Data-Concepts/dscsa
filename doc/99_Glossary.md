@@ -18,6 +18,7 @@ that the individual unit package-level serial numbers match the information supp
 | `OEE`     | OVERALL EQUIPMENT EFFECTIVENESS                                                           |
 | `PMOA`    | Primary Mode of Action                                                                    |
 | `RDF`     | Resource Description Framework                                                            |
+| `SSCC`    | Serial Shipping Container Code                                                            |
 | `SRP`     | Scan Reflectance Profile                                                                  |
 | `UUID`    | Universal Unique IDentifier                                                               |
 | `3PLs`    | third-party logistics provider                                                            |

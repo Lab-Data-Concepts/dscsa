@@ -8,10 +8,10 @@
 ## Common Development Commands
 
 1. Launch Ganache to initialize local blockchain
-2. npx truffle init
-3. npx truffle compile ./contracts/DSCSAOwnerMock.sol
+2. npx truffle init (only once)
+3. npx truffle compile ./contracts/DSCSA.sol
 4. npx truffle migrate --network development
-5. npx truffle test ./test/DSCSAOwnerMock.test.js
+5. npx truffle test ./test/DSCSAMock.test.js
 
 ## Miscellaneous Notes
 

@@ -1,5 +1,7 @@
 # ![LDC Logo](doc/99_images/LDC_32_32.ico) Drug Supply Chain Security Act (DSCSA) Blockchain
 
+[![built-with openzeppelin](https://img.shields.io/badge/built%20with-OpenZeppelin-3677FF)](https://docs.openzeppelin.com/)
+
 Implementation of the FDA DSCSA supply chain regulation in a Consortium Blockchain implemented on Ethereum.
 
 ## Overview
