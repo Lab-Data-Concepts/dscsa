@@ -1,3 +1,11 @@
+gtin: 855245005019      # Global Trade Item Number
+batch:
+  - [xyz123, 2025-Jan-1]
+pkg:                    # [Serial Number, Serial Shipping Container Code (SSCC)]
+  - [477018182632, 1]
+  - [477018182633, 1]
+
+
 metadata:
   
 
