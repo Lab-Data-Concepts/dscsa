@@ -26,7 +26,8 @@ A brief overview of the install process that was used in building this repositor
     - Add Ganache network to truffle configuration file (truffle-config.js)
     - Create migrations' file (2_deploy.js)
     - npx truffle migrate --network development
-11. Build [Unit Tests](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/test): install environment, helpers, and Chai for javascript assertions
+11. npm install --save ipfs-http-client
+12. Build [Unit Tests](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/test): install environment, helpers, and Chai for javascript assertions
     - npm install --save-dev @openzeppelin/test-environment
     - npm install --save-dev @openzeppelin/test-helpers
     - npm install --save-dev chai

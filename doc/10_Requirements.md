@@ -116,12 +116,16 @@ The blockchain will include keys to get additional metadata from other systems (
 
 | Metadata      | Definition                                                                                               |
 | :---          | ---                                                                                                      |
-| `GS1`         | [Supply Chain Standards,](https://www.gs1.org/)                                                          |
+| `OpenZeppelin`| [A library for secure smart contract development](https://docs.openzeppelin.com/openzeppelin/)           |
+| `GS1`         | [Supply Chain Standards](https://www.gs1.org/)                                                           |
 | `OPEN-SCS`    | [The Open Serialization Communication Standard (Open-SCS)](https://www.open-scs.org/)                    |
+| `SDMX & VTL`  | [A global initiative to improve Statistical Data and Metadata eXchange](https://sdmx.org/)               |
 | `CDISC`       | [Clinical Trial Standards](https://www.cdisc.org/)                                                       |
 | `E2B AE`      | [ICH E2B](https://ich.org/page/e2br3-individual-case-safety-report-icsr-specification-and-related-files) |
 | `HL7`         | [Health Level 7](https://www.hl7.org/implement/standards/)                                               |
 | `NCI-GDC`     | [Clinical Data Standardization](https://gdc.cancer.gov/about-data/gdc-data-processing/clinical-data-standardization) |
+
+The DSCSA will implement the [IERC1155MetadataURI](https://docs.openzeppelin.com/contracts/4.x/api/token/erc1155#IERC1155MetadataURI) interface which returns the URI for token type id. A metadata definition for the dscsa implementation with the flexibility for eacf NFT to implement their own metadata standards.
 
 ## Use Cases
 

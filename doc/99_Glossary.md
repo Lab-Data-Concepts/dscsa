@@ -12,6 +12,9 @@
 | `DPMS`    | GS1 Drug Transaction Messaging Standard                                                   |
 | `EPCIS`   | GS1 Electronic Product Code Information Services                                          |
 | `GAMP`    | Good Automated Manufacturing Practice                                                     |
+| `GIAI`    | GS1 Global Individual Asset Identifier                                                    |
+| `GLN`     | GS1 Global Location Number                                                                |
+| `GSIN`    | GS1 Global Shipment Identification Number                                                 |
 | `INFERENCE`   | Ability of a downstream trading partner to read the serial number of a case (or pallet), and “infer”
 that the individual unit package-level serial numbers match the information supplied by the upstream trading partner, without having to physically open the case and re-scan each item.                                                                                                   |
 | `MAH`     | Marketing Authorization Holder                                                            |

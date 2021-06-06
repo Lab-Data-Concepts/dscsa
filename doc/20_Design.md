@@ -21,3 +21,7 @@ A similar design was presented by [Middle East Medicine](https://www.middleeastm
 - Include state information (Expiration Date)
 - Obfuscate additional data like Trade name into the referenced Metadata which can encrypted if desired
 - Create DSCSA blockchain
+
+## IPFS
+
+[IPFS GitHub](https://github.com/ipfs/js-ipfs/blob/master/docs/core-api/FILES.md#ipfsadddata-options)

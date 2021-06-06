@@ -1,7 +1,37 @@
 schema: ipfs://bafybeiecqmgiydlm5pki546wavnsidbncb5l2iqhmnpxtmitf4m6p2ubbm/?filename=QmX87cNWEBGBhMLksusJh1rjm3vtLSuQJpUNFPjMWimRcn
-# Global Trade Item Number
-gtin: 855245005019 
-  # Lot number and associated expiration date
-  - [lot, exp]: 
-    # Serial Number
-    - ser: 477018182632
+products:
+  product:                      # drug, but in GS1 terminology
+    name: 
+    gtin: 855245005019          # Global Trade Item Number
+    batches:
+      - batch:                  
+        lot: xyz121             # Lot number
+        exp: 2025-Jan-1         # expiration date
+        pkg:                    # [Serial Number, Serial Shipping Container Code (SSCC)]
+          - [477018182631, 3]
+          - [477018182632, 3]
+      - batch:                  # drug, but in GS1 terminology
+        lot: xyz122             # Lot number
+        exp: 2025-Jan-2         # expiration date
+        pkg:                    # [Serial Number, Serial Shipping Container Code (SSCC)]
+          - [477018182633, 3]
+          - [477018182634, 3]
+    containers:
+    - container:
+        type: intermodal      # shipping container
+        size: 20              # standard 20' shipping container
+        relId: 1              # relative ID just used to tie a serial number to a container
+        id: 1231412341231     # ID used by the manufacturer
+        idType: giai          # type of ID, normally GS1's giai, but gsin  when shipping 
+    - container:
+        type: pallet          # standard US shipping pallet 4' which gives ~10 pallets per shipping container
+        relId: 2              
+        id: 1231412341232
+        idType: giai     
+        parentRelID: 1        # Is this container inside another?     
+    - container:
+        type: box             # Box/case of serialized drug packages     
+        relId: 3              
+        id: 1231412341233
+        idType: giai     
+        parentRelID: 2   
