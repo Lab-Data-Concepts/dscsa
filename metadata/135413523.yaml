@@ -1,0 +1,13 @@
+schema: ipfs://bafybeicq5gtkrxo63ecz7qqhjshca7fzlhfmica6m3rzpustvy7ccqfyja/?filename=135413523_Schema.yaml
+name: Sildenafil citrate
+symbol: C22H30N6O4S         # PubChem Molecular Formula
+logoURI: https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1337DEF16F9B486fAEd0293eb623Dc8395dFE46a/logo.png
+type: ERC1115
+tradeNames:
+- name: Viagra
+- name: Revatio
+- name: Caverta
+doses:
+- dose: 25 mg
+- dose: 50 mg
+- dose: 100 mg

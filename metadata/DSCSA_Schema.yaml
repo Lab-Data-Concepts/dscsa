@@ -1,0 +1,184 @@
+info: 
+    version: 0.0.1
+    title: FDA Drug Supply Chain Security Act (DSCSA) Blockchain
+    description: Implementation of the FDA DSCSA supply chain regulation in a Consortium Blockchain implemented on Ethereum.
+    url: https://github.com/Lab-Data-Concepts/dscsa 
+    contact:
+        name: Tracy Sanders
+        email: tsanders@labdataconcepts.com
+        url: http://labdataconcepts.com
+    license:
+        name: MIT
+        url: https://github.com/Lab-Data-Concepts/dscsa/blob/main/LICENSE
+schemas:
+    dscsa:
+        schema: 
+            type: string
+            description: schema defining the dscsa (this file)
+            required: true
+            example: ipfs://QmTnVy4vY8hpc2aBLG7zXB4b31tBiFjQFLsMbvFwMMcXZR/?filename=DSCSA_Schema.yaml
+        products:
+            type: string
+            description: collection of products since most shipments will include more than one product
+            required: true
+        product:
+            type: string
+            description: structure of product information
+            required: true
+        name:
+            type: string
+            description: The name of the item.  Consumer friendly short description of the product suitable for compact presentation.
+        gtin:
+            $ref: "#/schemas/gs1/gtin"
+        tokenId: 
+            type: integer
+            description: Identifier of the Ethereum Token; the PubChem ID for the drug being sold.
+            required: true
+            example: 135413523
+        tokenUri:
+            type: uri
+            description: Optional link to additional metadata about a specific token, i.e. package label
+            example: ipfs://bafybeiecqmgiydlm5pki546w...
+        batches:
+            type: string
+            description: collection of lots since most shipments will include more than one lot/batch number
+            required: true
+        batch:
+            type: string
+            description: structure of lot/batch information
+            required: true
+        lot:
+            $ref: "#/schemas/gs1/lot"
+        exp:
+            $ref: "#/schemas/gs1/exp"          
+        pkg:
+            type: array
+            description: sequence of sequences, repeating rows of an array that includes [serial number, container relID, previous addr, next addr]
+            required: true
+        containers:
+            type: string
+            description: collection of shipping packages since most shipments will include more than one lot/batch number
+            required: true
+        container:
+            type: string
+            description: logistic unit; any combination of trade items packaged together for storage / transport purposes
+            required: true
+            example: intermodal, pallet/parcel, case/box            
+        type:
+            type: string
+            description: Different types of logistical units
+            enum: [
+                intermodal,
+                pallet,
+                case
+                ]
+            example: intermodal        
+        relId:
+            type: integer
+            description: internal link between packages and there logistical shipping unit because 1 batch may be in multiple containers
+        id:
+            type: string
+            description: external identifier, i.e. GS1         
+        idType:
+            type: string
+            description: Different types of identifiers
+            enum: [
+                gs1_giai,
+                gs1_gsin
+                ]
+            example: intermodal         
+        parentRelID:
+            type: integer
+            description: Relative ID to another container.  Is this container inside another?
+    gs1:
+        info:
+            version: 1.0.0
+            title: GS1 Verification Messaging Standard
+            description: This the API specification for peer-to-peer communication between Verification Router Services or VRS
+            contact:
+                name: GS1
+                url: https://www.gs1.org
+                email: gsmp@gs1.org
+            servers: 
+            - url: https://vrs.example.com/gateway/placeholder
+            - schema: https://www.gs1.org/docs/epc/2019_06_30k_GS1_Lightweight_Verification_Messaging_1.1_OpenAPI.json        
+        gtin: 
+            type: string
+            description: Global Trade Item Number
+            required: true
+            minLength: 8
+            maxLength: 14
+            example: 175304202
+            pattern: ^\\d{12,14}|\\d{8}$
+        lot:
+            type: string
+            description: Lot/Batch Number
+            required: true
+            example: LZ109B15
+        exp:
+            type: string
+            description: Date of expiry for the item in format YYMMDD
+            required: true
+            minLength: 6
+            maxLength: 6
+            example: 170728          
+            pattern: ^\\d{6}$
+        ser:
+            type: string
+            description: Serial Number
+            required: true
+            example: XYZ12345AB                        
+        gln: 
+            type: string
+            description: Entity Global Location Number 
+            required: true
+            minLength: 13
+            maxLength: 13
+            example: 9071404000002          
+            pattern: ^\\d{13}$
+        uuid: 
+            type: string
+            description: Universally Unique Identifier (UUID)
+            example: 59bc5c88-15f7-49a7-9687-73b05d2c50a4
+            pattern: ^[a-fA-F\\d]{8}-[a-fA-F\\d]{4}-4[a-fA-F\\d]{3}-[89abAB][a-fA-F\\d]{3}-[a-fA-F\\d]{12}$
+        timestamp:
+            type: string
+            description: A timestamp to millisecond precision, with an explicit timezone indicator (+/-hh:mm) relative to UTC
+            example: 2018-08-14T23:29:00.000-08:00
+            pattern: ^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T(2[0-3]|[01][0-9]):[0-5][0-9]:[0-5][0-9]]\\.[0-9]{3}(Z|((\\+|\\-)((0[0-9]|1[0-3]):([0-5][0-9])|14:00)))
+        linkType:
+            type: string
+            enum: [verificationService]
+            example: verificationService
+        context:
+            type: string
+            enum: [dscsaSaleableReturn]
+            example: dscsaSaleableReturn
+        positiveVerificationStatus:
+            type: boolean
+            description: Please refer to the rules defined for the context for further details of what constitutes successful verification.  If verification succeeds, use true.
+            example: true
+            enum: [true]
+        negativeVerificationStatus:
+            type: boolean
+            description: Please refer to the rules defined for the context for further details of what constitutes unsuccessful verification.  If verification fails, use false and select a value for 'verificationFailureReason'.
+            example: false
+            enum: [false]
+        verificationFailureReason:
+            type: string
+            description: Mandatory if verification failed. Used to indicate which PI element(s) did not match, or to indicate that no reason has been provided (at the discretion of the responder).
+            enum: [
+                No_match_GTIN_Serial,
+                No_match_GTIN_Serial_Lot,
+                No_match_GTIN_Serial_Expiry,
+                No_match_GTIN_Serial_Lot_Expiry,
+                No_reason_provided
+                  ]
+            example: No_match_GTIN_Serial_Lot
+        additionalInformation:
+            type: string
+            description: Optional. May be used to provide additional information of the state of the SGTIN, for example, recalled. Instead of including an empty string or null, do NOT include this field unless is populated with a descriptive, standardised text value.
+            enum: [
+                Recalled,
+                Suspect
+                ]

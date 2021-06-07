@@ -23,5 +23,8 @@ that the individual unit package-level serial numbers match the information supp
 | `RDF`     | Resource Description Framework                                                            |
 | `SSCC`    | Serial Shipping Container Code                                                            |
 | `SRP`     | Scan Reflectance Profile                                                                  |
+| `Token`   | Digital assets that are being built on top of the Ethereum blockchain                     |
+| `URI`     | A Uniform Resource Identifier identifies a logical or physical resource                   |
+| `URL`     | A Uniform Resource Locator is a specific type of Uniform Resource Identifier              |
 | `UUID`    | Universal Unique IDentifier                                                               |
 | `3PLs`    | third-party logistics provider                                                            |

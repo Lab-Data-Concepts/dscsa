@@ -1,0 +1,23 @@
+info: 
+    version: 0.0.1
+    title: FDA Drug Supply Chain Security Act (DSCSA) Blockchain
+    description: Implementation of the FDA DSCSA supply chain regulation in a Consortium Blockchain implemented on Ethereum.
+    url: https://github.com/Lab-Data-Concepts/dscsa 
+    contact:
+        name: Tracy Sanders
+        email: tsanders@labdataconcepts.com
+        url: http://labdataconcepts.com
+    license:
+        name: MIT
+        url: https://github.com/Lab-Data-Concepts/dscsa/blob/main/LICENSE
+schemas:
+    dscsa:
+
+            "asset": "c60_t0x1337DEF16F9B486fAEd0293eb623Dc8395dFE46a",
+            "type": "ERC20",
+            "address": "0x1337DEF16F9B486fAEd0293eb623Dc8395dFE46a",
+            "name": "Armor",
+            "symbol": "ARMOR",
+            "decimals": 18,
+            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1337DEF16F9B486fAEd0293eb623Dc8395dFE46a/logo.png",
+            "pairs": []
