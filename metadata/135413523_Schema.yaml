@@ -1,23 +1,59 @@
 info: 
-    version: 0.0.1
-    title: FDA Drug Supply Chain Security Act (DSCSA) Blockchain
-    description: Implementation of the FDA DSCSA supply chain regulation in a Consortium Blockchain implemented on Ethereum.
-    url: https://github.com/Lab-Data-Concepts/dscsa 
-    contact:
-        name: Tracy Sanders
-        email: tsanders@labdataconcepts.com
-        url: http://labdataconcepts.com
-    license:
-        name: MIT
-        url: https://github.com/Lab-Data-Concepts/dscsa/blob/main/LICENSE
+  tokenId: 135413523          # tokenId reuses PubChem CID    
+  version: 0.0.1
+  title: Sildenafil citrate DSCSA Blockchain Token
+  description: Additional metadata on on DSCSA Token for Sildenafil citrate
+  url: https://github.com/Lab-Data-Concepts/dscsa 
+  contact:
+      name: Tracy Sanders
+      email: tsanders@labdataconcepts.com
+      url: http://labdataconcepts.com
+  license:
+      name: MIT
+      url: https://github.com/Lab-Data-Concepts/dscsa/blob/main/LICENSE
 schemas:
-    dscsa:
-
-            "asset": "c60_t0x1337DEF16F9B486fAEd0293eb623Dc8395dFE46a",
-            "type": "ERC20",
-            "address": "0x1337DEF16F9B486fAEd0293eb623Dc8395dFE46a",
-            "name": "Armor",
-            "symbol": "ARMOR",
-            "decimals": 18,
-            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1337DEF16F9B486fAEd0293eb623Dc8395dFE46a/logo.png",
-            "pairs": []
+  135413523:
+    schema: 
+        type: string
+        description: schema defining the token (this file)
+        required: true
+        example: ipfs://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/?filename=135413523_Schema.yaml
+    name:
+      type: string
+      description: The name of the item.  Consumer friendly short description of the product suitable for compact presentation.
+      example: Sildenafil citrate
+    symbol:
+      type: string
+      description: Token Symbol used for exchanges on tokens, but used here as the PubChem Molecular Formula of the drug.
+      example: C22H30N6O4S
+    logoURI:
+      type: uri
+      description: URI of token image to be displayed usually on an exchange, etc.  Using the PubChem structure image
+      example: https://github.com/Lab-Data-Concepts/dscsa/blob/main/doc/99_images/Sildenafil_citrate.png
+    tokenId:
+      type: integer
+      description: Identifier of the Ethereum Token; the PubChem ID for the drug being sold.
+      required: true
+      example: 135413523
+    type:
+      type: string
+      description: Different types of ETH defined tokens
+      enum: [
+        ERC20,      # fungible tokens: medium of exchange currency, voting rights, staking, and more.            
+        ERC721,     # non-fungible tokens
+        ERC777,     # fungible tokens, ERC20 + the equivalent of a msg.value field, but for tokens
+        ERC1115     # fungibility-agnostic and gas-efficient token contract due to batch transactions with multiple tokens
+        ]
+      example: ERC1115  
+    tradeNames:
+      type: string
+      description: collection of marketing name for drug
+      required: true
+    doses:
+      type: string
+      description: collection of drug doses
+      required: true      
+    dose:
+      type: string
+      description: sequence of dose for drug
+      required: true
