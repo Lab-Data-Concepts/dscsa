@@ -13,11 +13,23 @@
 4. npx truffle migrate --network development
 5. npx truffle test ./test/DSCSAMock.test.js
 
+## Address Notes (Private Key -> Public Key -> Ethereum Address)
+
+- Account: externally-owned account (EOA)
+- Contract:
+- Block:
+- Transaction (tx):
+- Event:
+
+
 ## Miscellaneous Notes
+
+- [Link truffle cli to truffle GUI](https://eattheblocks.com/how-to-use-ganache-gui-with-truffle-episode-14/)
 
 ### NPM
 
 - npm cache clean --force
+- npx truffle develop (links truffle to GUI Ganache Accounts)
 
 ### Windows
 

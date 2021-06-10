@@ -1,0 +1,46 @@
+schema: ipfs://bafybeicq5gtkrxo63ecz7qqhjshca7fzlhfmica6m3rzpustvy7ccqfyja/?filename=DSCSA_Schema.yaml
+products:
+  product:                      # drug, but in GS1 terminology
+    name: Sildenafil citrate
+    gtin: 855245005019          # Global Trade Item Number
+    tokenId: 135413523          # tokenId reuses PubChem CID
+                                # tokenUri to get other product related information 
+    tokenUri: ipfs://bafybeiecqmgiydlm5pki546wavnsidbncb5l2iqhmnpxtmitf4m6p2ubbm/?filename=QmX87cNWEBGBhMLksusJh1rjm3vtLSuQJpUNFPjMWimRcn
+    batches:
+      - batch:                  
+        lot: xyz121             # Lot number
+        exp: 2025-Jan-1         # expiration date
+        pkg:                    # [Serial Number, Serial Shipping Container Code (SSCC), from, to]
+        - [477018182631, 3, 0, 0]
+        - [477018182632, 3, 0, 0]
+      - batch:                  # drug, but in GS1 terminology
+        lot: xyz122             # Lot number
+        exp: 2025-Jan-2         # expiration date
+        pkg:                    # [Serial Number, Serial Shipping Container Code (SSCC)]
+        - [477018182633, 4, 0, 0]
+        - [477018182634, 4, 0, 0]
+containers:
+- container:
+    type: intermodal      # shipping container
+    size: 20              # standard 20' shipping container
+    relId: 1              # relative ID just used to tie a serial number to a container
+    id: 1231412341231     # ID used by the manufacturer
+    idType: gs1_giai      # type of ID, normally GS1's giai, but gsin when shipping 
+- container:
+    type: pallet          # standard US shipping pallet 4' which gives ~10 pallets per shipping container
+    relId: 2              
+    id: 1231412341232
+    idType: gs1_giai     
+    parentRelID: 1        # Is this container inside another?     
+- container:
+    type: case            # Box/case of serialized drug packages     
+    relId: 3              
+    id: 1231412341233
+    idType: gs1_giai     
+    parentRelID: 2   
+- container:
+    type: case            # Box/case of serialized drug packages     
+    relId: 4               
+    id: 1231412341233
+    idType: gs1_giai     
+    parentRelID: 2 
