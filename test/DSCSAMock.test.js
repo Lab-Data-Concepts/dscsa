@@ -59,7 +59,7 @@ contract('L-n-L 1 Shipping Container (SC) with metadata', function () {
   // Deploy a new DSCSA contract for each test
   beforeEach(async function () {
     console.log('<=== beforeEach(async function () ===>');
-    this.DSCSA = await DSCSA.new(uri, { from: manufacturer });
+    this.DSCSA = await DSCSA.new({ from: manufacturer });         // https://eattheblocks.com/how-to-use-ganache-gui-with-truffle-episode-14/
   });
 
   it('sets approval status which can be queried via isApprovedForAll', async function () {

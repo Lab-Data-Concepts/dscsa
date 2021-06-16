@@ -21,7 +21,6 @@
 - Transaction (tx):
 - Event:
 
-
 ## Miscellaneous Notes
 
 - [Link truffle cli to truffle GUI](https://eattheblocks.com/how-to-use-ganache-gui-with-truffle-episode-14/)
