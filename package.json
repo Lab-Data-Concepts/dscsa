@@ -23,7 +23,7 @@
     "@openzeppelin/test-helpers": "^0.5.11",
     "chai": "^4.3.4",
     "solc-0.7": "npm:solc@^0.7.0",
-    "truffle": "^5.3.6"
+    "truffle": "^5.7.1"
   },
   "dependencies": {
     "ipfs-api": "^26.1.2",
